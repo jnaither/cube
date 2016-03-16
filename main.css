@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Gotham;
+    src: url(res/fonts/gotham.ttf);
+}
+
+body {
+    background-color:#181818;
+    font-family:Gotham, sans-serif;
+    /** overflow:hidden; **/
+    color:rgba(255,255,255,.80);
+    margin:0;
+    -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+/** Custom rules **/
+
+#bt1 {
+    background-color:rgb(16,101,103);
+}
+
+#bt2 {
+    background-color:rgb(16,101,103);
+}
+
+#bt3 {
+    background-color:rgb(16,101,103);
+}
+
+#bt4 {
+    background-color:rgb(16,101,103);
+}
+
+.task_button {
+    width:100%;
+    height:70px;
+    margin-top:15px;
+    margin-bottom:15px;
+    line-height:70px;
+    text-align:center;
+    border-radius:2px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+#end_button {
+    width:100%;
+    height:70px;
+    margin-top:50px;
+    margin-bottom:15px;
+    line-height:70px;
+    text-align:center;
+    background-color:#00cf42;
+    border-radius:9999999999px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.custom_tr {
+    height:100px;
+}
+
+/** General rules **/
+
+.transitions {
+    /** Transitions **/ 
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition:.25s;
+}
+
+.transitions_slow {
+    /** Transitions **/ 
+    -o-transition:.6s;
+    -ms-transition:.6s;
+    -moz-transition:.6s;
+    -webkit-transition:.6s;
+    transition:.6s;
+}
+
+.transitions_superslow {
+    /** Transitions **/ 
+    -o-transition:1s;
+    -ms-transition:1s;
+    -moz-transition:1s;
+    -webkit-transition:1s;
+    transition:1s;
+}
+
+#input_box {
+    position:fixed;
+    z-index:999999;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:dimgrey;
+    color:#fff;
+    display:none;
+    padding-top:150px;
+}
