@@ -1,3 +1,17 @@
+function initUI(){
+    //Animate the logo    
+    setTimeout(function() {
+        document.getElementById('title_r').style.transform = "none";
+        document.getElementById('title_y').style.transform = "none";
+        document.getElementById('title_b').style.transform = "none";
+        }, 1000);
+    
+}
+
+initUI();
+
+
+
 //------------------------------
 //New Hammer.js
 

@@ -3,65 +3,34 @@
     src: url(res/fonts/gotham.ttf);
 }
 
+@font-face {
+    font-family: College;
+    src: url(res/fonts/TypoCollegeDemo.otf);
+}
+
 body {
     background-color:#181818;
     font-family:Gotham, sans-serif;
-    /** overflow:hidden; **/
+    overflow:hidden;
     color:rgba(255,255,255,.80);
     margin:0;
     -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* IE/Edge */
-  user-select: none;           /* non-prefixed version, currently
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently
                                   not supported by any browser */
 }
 /** Custom rules **/
 
-#bt1 {
-    background-color:rgb(16,101,103);
-}
-
-#bt2 {
-    background-color:rgb(16,101,103);
-}
-
-#bt3 {
-    background-color:rgb(16,101,103);
-}
-
-#bt4 {
-    background-color:rgb(16,101,103);
-}
-
-.task_button {
+.screen {
+    background-color:#181818;
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
     width:100%;
-    height:70px;
-    margin-top:15px;
-    margin-bottom:15px;
-    line-height:70px;
-    text-align:center;
-    border-radius:2px;
-    font-weight:900;
-    cursor:pointer;
-}
-
-#end_button {
-    width:100%;
-    height:70px;
-    margin-top:50px;
-    margin-bottom:15px;
-    line-height:70px;
-    text-align:center;
-    background-color:#00cf42;
-    border-radius:9999999999px;
-    font-weight:900;
-    cursor:pointer;
-}
-
-.custom_tr {
-    height:100px;
 }
 
 /** General rules **/
@@ -93,15 +62,119 @@ body {
     transition:1s;
 }
 
-#input_box {
-    position:fixed;
-    z-index:999999;
+/** Screens **/
+
+#homescreen {
+    z-index:100;
+    background: -moz-linear-gradient(top, rgba(85,237,255,1) 0%, rgba(213,250,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(85,237,255,1)), color-stop(100%, rgba(213,250,255,1)));
+    background: -webkit-linear-gradient(top, rgba(85,237,255,1) 0%, rgba(213,250,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(85,237,255,1) 0%, rgba(213,250,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(85,237,255,1) 0%, rgba(213,250,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(85,237,255,1) 0%, rgba(213,250,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55edff', endColorstr='#d5faff', GradientType=0 );
+}
+
+#homescreen_deco {
+    position:absolute;
     top:0;
     left:0;
-    height:100%;
-    width:100%;
-    background-color:dimgrey;
-    color:#fff;
-    display:none;
-    padding-top:150px;
+    width:100vw;
+    height:100vh;
+    z-index:90;
+}
+
+#homescreen_deco {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:85;
+}
+
+#worldscreen {
+    z-index:70;
+}
+
+#scorescreen {
+    z-index:40;
+}
+
+#gamescreen {
+    z-index:10;
+}
+
+/** Typography **/
+
+.clean {
+    text-decoration:none;
+    color:rgba(128,128,128,1);
+    margin:0;
+}
+
+.college {
+    color:rgba(128,128,128,1);
+    font-family:'College', sans-serif;
+}
+
+#title_r {
+    height:40vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:6;
+    background-image:url(res/sprites/cube_r.png);
+    background-size:60vw;
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    transform:translateX(-100vw) translateY(30vw);
+}
+
+#title_y {
+    height:40vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:4;
+    background-image:url(res/sprites/cube_y.png);
+    background-size:60vw;
+    background-repeat:no-repeat;
+    background-position: 47.5% 55%;
+    transform:translateX(-100vw) translateY(30vw);
+    -webkit-transition-delay: 0.15s; /* Safari */
+    transition-delay: 0.15s;
+}
+
+#title_b {
+    height:40vh;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    background-image:url(res/sprites/cube_b.png);
+    background-size:60vw;
+    background-repeat:no-repeat;
+    background-position: 45% 60%;
+    transform:translateX(-100vw) translateY(30vw);
+    -webkit-transition-delay: 0.3s; /* Safari */
+    transition-delay: 0.3s;
+}
+
+.button {
+    width:50vw;
+    height:12vw;
+    font-family: 'College', sans-serif;
+    color:rgba(240,240,240,1);
+    background-color:rgba(42,164,255,1);
+    border:rgba(23,134,220,1) 1.5vw solid;
+    border-radius:1vw;
+    text-align:center;
+    line-height:12vw;
+    margin:auto;
+    margin-top:2.5vh;
+    font-size:6vw;
 }
