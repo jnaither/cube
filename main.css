@@ -75,7 +75,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55edff', endColorstr='#d5faff', GradientType=0 );
 }
 
-#homescreen_deco {
+#homescreen_interface {
     position:absolute;
     top:0;
     left:0;
@@ -177,4 +177,5 @@ body {
     margin:auto;
     margin-top:2.5vh;
     font-size:6vw;
+    opacity:0;
 }

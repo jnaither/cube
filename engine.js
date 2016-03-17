@@ -1,16 +1,33 @@
 function initUI(){
     //Animate the logo    
+        
     setTimeout(function() {
         document.getElementById('title_r').style.transform = "none";
         document.getElementById('title_y').style.transform = "none";
         document.getElementById('title_b').style.transform = "none";
         }, 1000);
     
+    setTimeout(function() {
+        document.getElementById('button_play').style.opacity = "1";
+        document.getElementById('button_worlds').style.opacity = "1";
+        document.getElementById('button_highscores').style.opacity = "1";
+        }, 2000);
 }
 
 initUI();
 
-
+function loadLevel(){
+   
+     document.getElementById('button_play').style.opacity = "0";
+        document.getElementById('button_worlds').style.opacity = "0";
+        document.getElementById('button_highscores').style.opacity = "0";
+    
+    setTimeout(function() {
+        document.getElementById('title_r').style.transform = "translateX(100vw) translateY(-30vw)";
+        document.getElementById('title_y').style.transform = "translateX(100vw) translateY(-30vw)";
+        document.getElementById('title_b').style.transform = "translateX(100vw) translateY(-30vw)";
+        }, 300);
+}
 
 //------------------------------
 //New Hammer.js
