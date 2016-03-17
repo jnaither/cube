@@ -42,15 +42,9 @@ function loadGame(){
     
 }
 
-function loadLevel(levelname){
-    //Set variables to manipulate game elements
-    var gameCanvas = document.getElementById('game_canvas');
-    if(levelname.backgroundType == "gradient"){
-        gameCanvas.style.background = "linear-gradient(to bottom, " + levelname.backgroundColor1 + " 0%, " + levelname.backgroundColor2 + " 100%)"
-    }
-}
 
 //------------------------------
+//Hammer JS is used to listen to touch events
 //New Hammer.js
 
 var myElement = document.getElementById('sensitive_area');

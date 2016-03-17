@@ -25,7 +25,7 @@ body {
 /** Custom rules **/
 
 .screen {
-    background-color:#181818;
+   /*  background-color:#181818;*/
     position:absolute;
     left:0;
     top:0;

@@ -60,14 +60,14 @@
         <div style="display:none;" id="scorescreen">1</div>
         <!-- Gamescreen -->
         <div class="screen transitions" id="gamescreen">
-            <div id="game_canvas">
-                &nbsp;
-            </div>
+            <canvas style="width:100vw;height:100vh;" id="game_canvas" resize></canvas>
             <div id="sensitive_area">
                 &nbsp;
             </div>
         </div>
         
+        <script src="libs/paper-full.min.js"></script>
+        <script src="paperCube.js"></script>
         <script src="libs/jquery-2.1.4.min.js"></script>
         <script src="libs/hammer.min.js"></script>
         <script src="levels/levels.js"></script>
