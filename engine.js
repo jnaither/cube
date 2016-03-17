@@ -16,7 +16,7 @@ function initUI(){
 
 initUI();
 
-function loadLevel(){
+function loadGame(){
    
      document.getElementById('button_play').style.opacity = "0";
         document.getElementById('button_worlds').style.opacity = "0";
@@ -26,7 +26,28 @@ function loadLevel(){
         document.getElementById('title_r').style.transform = "translateX(100vw) translateY(-30vw)";
         document.getElementById('title_y').style.transform = "translateX(100vw) translateY(-30vw)";
         document.getElementById('title_b').style.transform = "translateX(100vw) translateY(-30vw)";
-        }, 300);
+        }, 100);
+    
+    setTimeout(function() {
+        document.getElementById('homescreen').style.opacity = "0";
+        
+        //Loadlevel when fading
+        loadLevel(level1);
+        
+        }, 900);
+    setTimeout(function() {
+        document.getElementById('homescreen').style.display = "none";
+        }, 1400);
+    
+    
+}
+
+function loadLevel(levelname){
+    //Set variables to manipulate game elements
+    var gameCanvas = document.getElementById('game_canvas');
+    if(levelname.backgroundType == "gradient"){
+        gameCanvas.style.background = "linear-gradient(to bottom, " + levelname.backgroundColor1 + " 0%, " + levelname.backgroundColor2 + " 100%)"
+    }
 }
 
 //------------------------------

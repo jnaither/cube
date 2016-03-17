@@ -11,7 +11,7 @@
             <div id="homescreen_deco">
                 &nbsp;
             </div>
-            <div id="homescreen_interface">
+            <div class="transitions_superslow" id="homescreen_interface">
                 <table cellpadding="0" cellspacing="0" style="width:100%;height:100vh;">
                     <tr style="height:40vh;">
                         <td>
@@ -28,7 +28,7 @@
                     </tr>
                     <tr style="height:30vh;">
                         <td>
-                            <div onclick="loadLevel()" id="button_play" class="button transitions_superslow">
+                            <div onclick="loadGame()" id="button_play" class="button transitions_superslow">
                                 PLAY
                             </div>
                             <div id="button_worlds" class="button transitions_superslow">
@@ -55,14 +55,22 @@
             </div>
         </div>
         <!-- Worldscreen -->
-        <div id="sensitive_area" id="worldscreen">1</div>
+        <div style="display:none;" id="worldscreen">1</div>
         <!-- Scorescreen -->
-        <div id="scorescreen">1</div>
+        <div style="display:none;" id="scorescreen">1</div>
         <!-- Gamescreen -->
-        <div id="gamescreen">1</div>
+        <div class="screen transitions" id="gamescreen">
+            <div id="game_canvas">
+                &nbsp;
+            </div>
+            <div id="sensitive_area">
+                &nbsp;
+            </div>
+        </div>
         
         <script src="libs/jquery-2.1.4.min.js"></script>
         <script src="libs/hammer.min.js"></script>
+        <script src="levels/levels.js"></script>
         <script src="engine.js"></script>
         
 	</body>

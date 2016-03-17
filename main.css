@@ -179,3 +179,21 @@ body {
     font-size:6vw;
     opacity:0;
 }
+
+#sensitive_area {
+    position:absolute;
+    width:100vw;
+    height:90vh;
+    top:10vh;
+    left:0;
+    z-index:4;
+}
+
+#game_canvas {
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    z-index:11;
+}
